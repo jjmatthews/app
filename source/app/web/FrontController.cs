@@ -11,7 +11,7 @@
 
         public void process(IEncapsulateRequestDetails a_new_request)
         {
-            var command = command_registry.get_the_command_that_can_process_the_request();
+            var command = command_registry.get_the_command_that_can_process_the_request(a_new_request);
             command.process(a_new_request);
         }
     }
