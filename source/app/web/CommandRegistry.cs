@@ -16,7 +16,12 @@ namespace app.web
 
     public IProcessARequest get_the_command_that_can_process_The_request(IEncapsulateRequestDetails request)
     {
-        return this.all_commands.First(x => x.can_process(request));
+        foreach (var command in all_commands)
+        {
+            if (command.can_process(request))
+                return command;
+        }
+        return special_case;
     }
   }
 }
