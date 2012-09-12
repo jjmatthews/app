@@ -35,7 +35,7 @@ namespace app.specs
             Because b = () =>
               result = sut.get_the_command_that_can_process_the_request(request);
 
-            It should_return_the_command_that_an_handle_it = () =>
+            It should_return_the_command_that_can_handle_it = () =>
               result.ShouldEqual(the_command_that_can_handle_the_request);
 
 
