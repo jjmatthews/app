@@ -21,17 +21,17 @@ namespace app.specs
         command_that_can_process = fake.an<IProcessARequest>();
         the_request = fake.an<IEncapsulateRequestDetails>();
 
-        command_registry.setup(x => x.get_the_command_that_can_process_The_request(the_request)).Return(
+        command_registry.setup(x => x.get_the_command_that_can_process_the_request(the_request)).Return(
           command_that_can_process);
       };
 
       Because b = () =>
         sut.process(the_request);
 
-      It should_use_a_command_registry_to_find_the_command_that_Can_process_the_request = () =>
-        command_registry.received(x => x.get_the_command_that_can_process_The_request(the_request));
+      It should_use_a_command_registry_to_find_the_command_that_can_process_the_request = () =>
+        command_registry.received(x => x.get_the_command_that_can_process_the_request(the_request));
 
-      It should_process_the_request_using_the_command_that_CAn_Handle_it = () =>
+      It should_process_the_request_using_the_command_that_can_handle_it = () =>
         command_that_can_process.received(x => x.process(the_request));
 
       static IProcessARequest command_that_can_process;
