@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace app.utility
 {
@@ -6,17 +7,16 @@ namespace app.utility
   {
     public static GetLoggingFactory_Behaviour logging_factory_resolution = () => 
     {
-      throw new NotImplementedException("Needs to be created during startup ");
+      throw new NotImplementedException("Needs to be set during startup ");
     };
 
-    public static ILog an
+    public static GetTheCallingType_Behaviour calling_type_resolution = () =>
+      new StackFrame(1).GetMethod().DeclaringType;
+
+    public static IProvideAccessToLogging an
     {
-      get { return logging_factory_resolution().create_logger_bound_to(get_the_calling_class()); }
+      get { return logging_factory_resolution().create_logger_bound_to(calling_type_resolution()); }
     }
 
-    static Type get_the_calling_class()
-    {
-      throw new NotImplementedException();
-    }
   }
 }

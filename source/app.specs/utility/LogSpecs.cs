@@ -16,7 +16,7 @@ namespace app.specs.utility
     {
       Establish context = () =>
       {
-        logger = fake.an<ILog>();
+        logger = fake.an<IProvideAccessToLogging>();
         log_factory = fake.an<ICreateLoggers>();
 
         log_factory.setup(x => x.create_logger_bound_to(typeof(when_accessing_logging_functionality))).Return(logger);
@@ -30,8 +30,8 @@ namespace app.specs.utility
       It should_return_a_logger_bound_to_the_calling_type = () => 
         result.ShouldEqual(logger);
 
-      static ILog logger;
-      static ILog result;
+      static IProvideAccessToLogging logger;
+      static IProvideAccessToLogging result;
       static GetLoggingFactory_Behaviour logging_factory_behaviour;
       static ICreateLoggers log_factory;
     }
