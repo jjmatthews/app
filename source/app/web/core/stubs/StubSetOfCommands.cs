@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq.Expressions;
 using app.web.app.catalogbrowsing;
 using app.web.app.catalogbrowsing.stubs;
 
@@ -16,20 +14,18 @@ namespace app.web.core.stubs
 
     public void do_something()
     {
-      
     }
 
     public class Person
     {
       public int age { get; set; }
-
     }
+
     public IEnumerator<IProcessARequest> GetEnumerator()
     {
       yield return new RequestCommand(x => true,
-                                      new ViewAReport<IEnumerable<ProductItem>>(x => new StubProductsRepository().get_products_in(x.map<CurrentDepartment>())));
-      yield return new RequestCommand(x => true,
-                                      new ViewAReport<IEnumerable<DepartmentItem>>(new GetTheMainDepartmentsInTheStore().fetch_using));
+                                      new ViewAReport<IEnumerable<DepartmentItem>>(
+                                        new GetTheMainDepartmentsInTheStore().fetch_using));
     }
   }
 
