@@ -7,6 +7,6 @@ namespace app.web.app.shopping
     public void process(IEncapsulateRequestDetails request)
     {
       throw new System.NotImplementedException();
-    }
+    } 
   }
 }
