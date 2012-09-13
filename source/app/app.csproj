@@ -77,19 +77,26 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Block.cs" />
     <Compile Include="Calculator.cs" />
+    <Compile Include="FuncExtensions.cs" />
     <Compile Include="ICalculate.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\app\catalogbrowsing\CurrentDepartment.cs" />
     <Compile Include="web\app\catalogbrowsing\DepartmentItem.cs" />
+    <Compile Include="web\app\catalogbrowsing\FetchData_Behaviour.cs" />
+    <Compile Include="web\app\catalogbrowsing\IFetchData.cs" />
     <Compile Include="web\app\catalogbrowsing\IFindDepartments.cs" />
     <Compile Include="web\app\catalogbrowsing\IFindProducts.cs" />
     <Compile Include="web\app\catalogbrowsing\ProductItem.cs" />
     <Compile Include="web\app\catalogbrowsing\stubs\StubDepartmentRepository.cs" />
     <Compile Include="web\app\catalogbrowsing\stubs\StubProductsRepository.cs" />
+    <Compile Include="web\app\catalogbrowsing\TimedFeature.cs" />
+    <Compile Include="web\app\catalogbrowsing\ViewAReport.cs" />
     <Compile Include="web\app\catalogbrowsing\ViewTheDepartmentsInADeparment.cs" />
     <Compile Include="web\app\catalogbrowsing\ViewTheMainDepartmentsInTheStore.cs" />
     <Compile Include="web\app\catalogbrowsing\ViewTheProductInTheDepartment.cs" />
+    <Compile Include="web\app\shopping\AddAnItemToTheCart.cs" />
     <Compile Include="web\core\aspnet\CreatePage_Behaviour.cs" />
     <Compile Include="web\core\aspnet\GetTheCurrentContext_Behaviour.cs" />
     <Compile Include="web\core\aspnet\IDisplayA.cs" />
