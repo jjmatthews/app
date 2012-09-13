@@ -1,6 +1,7 @@
 ﻿using Machine.Specifications;
 using app.utility;
 using developwithpassion.specifications.rhinomocks;
+using developwithpassion.specifications.extensions;
 
 namespace app.specs.utility
 {
@@ -11,29 +12,28 @@ namespace app.specs.utility
     }
 
     [Subject(typeof(Log))]
-    public class when_create_a_logger : concern
+    public class when_accessing_logging_functionality : concern
     {
       Establish context = () =>
       {
         logger = fake.an<ILog>();
-        GetCurrentLoggingBehaviour item = type_that_requested_logging =>
-        {
-          type_that_requested_logging.ShouldEqual(typeof(when_create_a_logger));
-          return logger;
-        };
+        log_factory = fake.an<ICreateLoggers>();
 
-        spec.change(() => Log.logging_behaviour).to(item);
+        log_factory.setup(x => x.create_logger_bound_to(typeof(when_accessing_logging_functionality))).Return(logger);
+        GetLoggingFactory_Behaviour item = () => log_factory;
+        spec.change(() => Log.logging_factory_resolution).to(item);
       };
 
       Because b = () =>
-      {
         result = Log.an;
-      };
 
-      It should_return_the_same_logging_behaviour = () => result.ShouldEqual(logger);
+      It should_return_a_logger_bound_to_the_calling_type = () => 
+        result.ShouldEqual(logger);
+
       static ILog logger;
       static ILog result;
-      static GetCurrentLoggingBehaviour logging_behaviour;
+      static GetLoggingFactory_Behaviour logging_factory_behaviour;
+      static ICreateLoggers log_factory;
     }
   }
 }

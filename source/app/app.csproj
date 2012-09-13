@@ -82,7 +82,8 @@
     <Compile Include="FuncExtensions.cs" />
     <Compile Include="ICalculate.cs" />
     <Compile Include="MessageGenerator.cs" />
-    <Compile Include="utility\GetCurrentLoggingBehaviour.cs" />
+    <Compile Include="utility\GetLoggingFactory_Behaviour.cs" />
+    <Compile Include="utility\ICreateLoggers.cs" />
     <Compile Include="utility\ILog.cs" />
     <Compile Include="utility\Log.cs" />
     <Compile Include="web\app\catalogbrowsing\CurrentDepartment.cs" />
