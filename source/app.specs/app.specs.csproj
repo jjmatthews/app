@@ -72,6 +72,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Machine.Specifications.0.4.24.0\lib\Machine.Specifications.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Build.Framework" />
     <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
       <HintPath>..\..\packages\RhinoMocks.3.6\lib\Rhino.Mocks.dll</HintPath>
     </Reference>
@@ -118,6 +119,7 @@
     <Compile Include="BasicHandlerSpecs.cs" />
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
+    <Compile Include="StaticLoggingSpecs.cs" />
     <Compile Include="ViewTheDepartmentsInADeparmentsSpecs.cs" />
     <Compile Include="ViewTheProductInTheDepartmentSpecs.cs" />
     <Compile Include="WebFormDisplayEngineSpecs.cs" />

@@ -28,6 +28,7 @@ namespace app.web.core.stubs
     {
       yield return new RequestCommand(x => true,
                                       new ViewAReport<IEnumerable<ProductItem>>(x => new StubProductsRepository().get_products_in(x.map<CurrentDepartment>())));
+
       yield return new RequestCommand(x => true,
                                       new ViewAReport<IEnumerable<DepartmentItem>>(new GetTheMainDepartmentsInTheStore().fetch_using));
     }
