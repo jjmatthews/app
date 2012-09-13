@@ -117,7 +117,7 @@
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="MemoizationSpecs.cs" />
-    <Compile Include="ViewSomethingSpecs.cs" />
+    <Compile Include="ViewAReportSpecs.cs" />
     <Compile Include="ViewTheDepartmentsInADeparmentsSpecs.cs" />
     <Compile Include="ViewTheProductInTheDepartmentSpecs.cs" />
     <Compile Include="WebFormDisplayEngineSpecs.cs" />
