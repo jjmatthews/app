@@ -17,7 +17,7 @@ namespace app.specs
         {}
 
         
-        public class when_run : concern
+       /* public class when_run : concern
         {
             Establish context = () =>
                                     {
@@ -37,7 +37,7 @@ namespace app.specs
             static IDisplayInformation display_engine;
             static IOrderEngine order_engine;
             static IEncapsulateRequestDetails the_request;
-        }
+        }*/
 
     }
 }
