@@ -118,6 +118,7 @@
     <Compile Include="BasicHandlerSpecs.cs" />
     <Compile Include="CalculatorSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
+    <Compile Include="ExpressionSpecs.cs" />
     <Compile Include="MemoizationSpecs.cs" />
     <Compile Include="LogSpecs.cs" />
     <Compile Include="utility\PersonSpecs.cs" />
