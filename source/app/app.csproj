@@ -87,6 +87,7 @@
     <Compile Include="utility\ICreateLoggers.cs" />
     <Compile Include="utility\IProvideAccessToLogging.cs" />
     <Compile Include="utility\Log.cs" />
+    <Compile Include="utility\Person.cs" />
     <Compile Include="web\app\catalogbrowsing\CurrentDepartment.cs" />
     <Compile Include="web\app\catalogbrowsing\DepartmentItem.cs" />
     <Compile Include="web\app\catalogbrowsing\FetchData_Behaviour.cs" />

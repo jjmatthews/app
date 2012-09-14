@@ -120,6 +120,7 @@
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="MemoizationSpecs.cs" />
     <Compile Include="LogSpecs.cs" />
+    <Compile Include="utility\PersonSpecs.cs" />
     <Compile Include="ViewAReportSpecs.cs" />
     <Compile Include="ViewTheDepartmentsInADeparmentsSpecs.cs" />
     <Compile Include="ViewTheProductInTheDepartmentSpecs.cs" />
