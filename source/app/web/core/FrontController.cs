@@ -1,4 +1,6 @@
-﻿namespace app.web.core
+﻿using app.utility;
+
+namespace app.web.core
 {
   public class FrontController : IProcessWebRequests
   {
@@ -11,6 +13,7 @@
 
     public FrontController():this(new CommandRegistry())
     {
+      Log.an.all_the_current_calls();
     }
 
     public void process(IEncapsulateRequestDetails a_new_request)

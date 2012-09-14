@@ -3,7 +3,7 @@ using app.utility;
 using developwithpassion.specifications.rhinomocks;
 using developwithpassion.specifications.extensions;
 
-namespace app.specs.utility
+namespace app.specs
 {
   public class LogSpecs
   {

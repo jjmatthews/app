@@ -11,7 +11,7 @@ namespace app.utility
     };
 
     public static GetTheCallingType_Behaviour calling_type_resolution = () =>
-      new StackFrame(1).GetMethod().DeclaringType;
+      new StackFrame(2).GetMethod().DeclaringType;
 
     public static IProvideAccessToLogging an
     {
